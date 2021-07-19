@@ -20,7 +20,7 @@ public class JobDetail {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_JOB")
-    private String id;
+    private int id;
 	@Column(name = "STATE")
 	private String state;
 	@Column(name = "CREATED_DATE")
@@ -77,7 +77,7 @@ public class JobDetail {
 		}
 	}
 	
-	public JobDetail(String jobName, Date currStartTime, String id){
+	public JobDetail(String jobName, Date currStartTime, int id){
 		this.jobName = jobName;
 		this.id = id;
 		if(currStartTime != null ) {
@@ -102,11 +102,11 @@ public class JobDetail {
 		}
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

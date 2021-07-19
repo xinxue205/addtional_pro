@@ -1,10 +1,8 @@
 package wxx.jpa_test;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +16,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import wxx.jpa_test.entity.Host;
 import wxx.jpa_test.entity.JobDetail;
-import wxx.jpa_test.entity.TRoleEntity;
 import wxx.jpa_test.entity.TenantEntity;
 import wxx.jpa_test.entity.ViewInfo;
 import wxx.jpa_test.service.ServiceImpl;
@@ -70,8 +67,20 @@ public class JpaTest {
 			page = findAll.nextPageable();
 		}
     }
+
     
     @Test
+    public void addDel() {
+//    	TenantEntity tenant = new TenantEntity();
+//        tenant.setId("131");
+//        tenant.setName("test1");
+//        tenant.setAdditionInfo("comba1");
+//        
+//        svc.save(tenant);
+        svc.deleteById("132");
+    }
+    
+//    @Test
     public void test1(){//使用jpa的 Repository 自定义声明式查询方法
    		TenantEntity tenant = new TenantEntity();
         tenant.setId("132");

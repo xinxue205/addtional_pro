@@ -44,6 +44,10 @@ public class ServiceImpl {
 		return hostDao.getHostByEntity(entityId);
 	}
     
+    public void deleteById(String id) {
+    	tenantDao.delete(id);
+    }
+    
     public List<Host> getHostsPerFunc(){
 		return hostDao.getHostsPerFunc();
 	}
