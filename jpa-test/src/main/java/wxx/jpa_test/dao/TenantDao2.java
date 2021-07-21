@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import wxx.jpa_test.entity.TenantEntity;
+import wxx.jpa_test.entity.DO.TenantEntity;
 
 public interface TenantDao2 extends JpaRepository<TenantEntity, String> {
 	

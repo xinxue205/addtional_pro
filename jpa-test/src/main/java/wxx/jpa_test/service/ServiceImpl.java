@@ -16,11 +16,11 @@ import wxx.jpa_test.dao.HostDao;
 import wxx.jpa_test.dao.JobDetailDao;
 import wxx.jpa_test.dao.TRoleEntityRepository;
 import wxx.jpa_test.dao.TenantPageDao;
+import wxx.jpa_test.entity.DO.Host;
+import wxx.jpa_test.entity.DO.JobDetail;
+import wxx.jpa_test.entity.DO.TRoleEntity;
+import wxx.jpa_test.entity.DO.TenantEntity;
 import wxx.jpa_test.dao.TenantDao;
-import wxx.jpa_test.entity.Host;
-import wxx.jpa_test.entity.JobDetail;
-import wxx.jpa_test.entity.TRoleEntity;
-import wxx.jpa_test.entity.TenantEntity;
 
 @Service
 public class ServiceImpl {

@@ -1,16 +1,13 @@
 package wxx.jpa_test.dao;
 
 import java.util.List;
-import java.util.Map;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-import wxx.jpa_test.entity.JobDetail;
-import wxx.jpa_test.entity.TenantEntity;
-import wxx.jpa_test.entity.ViewInfo;
+import wxx.jpa_test.entity.DO.TenantEntity;
+import wxx.jpa_test.entity.DO.ViewInfo;
 
 public interface TenantDao extends CrudRepository<TenantEntity, String> {
 	
@@ -28,7 +25,7 @@ public interface TenantDao extends CrudRepository<TenantEntity, String> {
     @Query("select new TenantEntity(p1.id, p1.name, p1.additionInfo) from TenantEntity p1, TenantEntity1 p2 where p1.id =p2.id")
     List<TenantEntity> getTenantWithTenant1();
     
-    @Query("select new wxx.jpa_test.entity.ViewInfo(p, p1) from TenantEntity p, TenantEntity1 p1 where p.id =p1.id")
+    @Query("select new wxx.jpa_test.entity.DO.ViewInfo(p, p1) from TenantEntity p, TenantEntity1 p1 where p.id =p1.id")
     List<ViewInfo> getTenantWithTenant2();
     
     @Query("from TenantEntity where name = ?1 order by id desc")

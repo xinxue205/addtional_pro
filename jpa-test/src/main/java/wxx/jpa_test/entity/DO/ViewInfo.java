@@ -1,4 +1,4 @@
-package wxx.jpa_test.entity;
+package wxx.jpa_test.entity.DO;
 
 public class ViewInfo {
 	private TenantEntity e;

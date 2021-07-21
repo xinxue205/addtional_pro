@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
-import wxx.jpa_test.entity.TRoleEntity;
+import wxx.jpa_test.entity.DO.TRoleEntity;
 
 public interface TRoleEntityRepository extends JpaRepository <TRoleEntity, Integer> {
 	TRoleEntity findByRolename(String rolename);

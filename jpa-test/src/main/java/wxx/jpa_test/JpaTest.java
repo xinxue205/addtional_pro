@@ -14,10 +14,10 @@ import org.springframework.data.domain.Sort;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import wxx.jpa_test.entity.Host;
-import wxx.jpa_test.entity.JobDetail;
-import wxx.jpa_test.entity.TenantEntity;
-import wxx.jpa_test.entity.ViewInfo;
+import wxx.jpa_test.entity.DO.Host;
+import wxx.jpa_test.entity.DO.JobDetail;
+import wxx.jpa_test.entity.DO.TenantEntity;
+import wxx.jpa_test.entity.DO.ViewInfo;
 import wxx.jpa_test.service.ServiceImpl;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -71,13 +71,14 @@ public class JpaTest {
     
     @Test
     public void addDel() {
-//    	TenantEntity tenant = new TenantEntity();
-//        tenant.setId("131");
-//        tenant.setName("test1");
-//        tenant.setAdditionInfo("comba1");
-//        
-//        svc.save(tenant);
-        svc.deleteById("132");
+    	String a = "11";
+    	TenantEntity tenant = new TenantEntity(a, a, a);
+//        tenant.setId("132");
+//        tenant.setName("test2");
+//        tenant.setAdditionInfo("comba2");
+        
+        svc.save(tenant);
+//        svc.deleteById("132");
     }
     
 //    @Test
